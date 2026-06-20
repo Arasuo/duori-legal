@@ -41,13 +41,13 @@
 <header>
   <div class="logo">Duori <span>둘이 — "the two of us"</span></div>
   <h1>Privacy Policy</h1>
-  <div class="meta">Effective Date: May 3, 2026 &nbsp;·&nbsp; Last Updated: May 29, 2026</div>
+  <div class="meta">Effective Date: May 3, 2026 &nbsp;·&nbsp; Last Updated: June 19, 2026</div>
 </header>
 
 <div class="container">
 
   <div class="highlight-box">
-    <strong>Plain English Summary:</strong> Duori lets you track your spending manually or by connecting a bank account. We never sell your data, never move your money, and never share your financial information with advertisers.
+    <strong>Plain English Summary:</strong> Duori is a budgeting app where you track your spending by entering it yourself — we do not connect to your bank. We never sell your data, never move your money, and never share your financial information with advertisers.
   </div>
 
   <div class="toc">
@@ -84,15 +84,16 @@
     <h3>2.1 Information You Provide Directly</h3>
     <ul>
       <li><strong>Account information:</strong> Your email address and display name when you create an account.</li>
+      <li><strong>Sign-in provider data:</strong> If you choose to sign in with Apple or Google, we receive basic profile information (such as your email address and name) from that provider in order to create and secure your account. We do not receive your provider password.</li>
       <li><strong>Photos and images:</strong> If you use the "Can I Afford This?" visual affordability check feature, you may upload or capture a photo of an item. These images are transmitted to our AI processing service and are not permanently stored by Duori after the analysis is complete.</li>
       <li><strong>Chat messages:</strong> Your conversations with Duo, our AI companion, are stored to provide continuity in the chat experience and to allow Duo to reference your financial context over time.</li>
     </ul>
 
     <h3>2.2 Financial Information (Manual Entry)</h3>
-    <p>When you use Duori, you may manually enter financial information including:</p>
+    <p>Duori does not link to your bank or import data automatically. All financial information in the app is entered by you, and may include:</p>
     <ul>
-      <li>Account names, types (checking, savings, credit), and balances you input manually</li>
-      <li>Transactions you add manually, including merchant names, amounts, dates, and categories</li>
+      <li>Account names, types (chequing, savings), currencies, and balances you input manually</li>
+      <li>Transactions you add manually, including merchant or description names, amounts, dates, and categories</li>
       <li>Income amounts and budget limits you set within the app</li>
     </ul>
     <p>This information is stored securely in our database and is used solely to power Duori's budgeting and AI features.</p>
@@ -101,6 +102,7 @@
     <ul>
       <li><strong>Device information:</strong> Device type, operating system version, app version.</li>
       <li><strong>Push notification tokens:</strong> An Expo push token used to deliver spending alerts and Duo messages to your device.</li>
+      <li><strong>Subscription status:</strong> Whether you have an active subscription, trial, or access grant, retrieved through our subscription provider (RevenueCat) using an app-specific account identifier.</li>
       <li><strong>Crash reports:</strong> If the app crashes, diagnostic information may be automatically collected to help us fix bugs.</li>
     </ul>
   </section>
@@ -132,6 +134,11 @@
           <td>Sending spending alerts and push notifications</td>
           <td>Transaction data, push token</td>
           <td>Contract performance / Consent</td>
+        </tr>
+        <tr>
+          <td>Managing your subscription and app access</td>
+          <td>Subscription status, app account identifier</td>
+          <td>Contract performance</td>
         </tr>
         <tr>
           <td>Authenticating your account and maintaining security</td>
@@ -169,9 +176,9 @@
     <p>Specifically, when you use Duo's AI chat features and have provided consent, the following data is included in the request sent to OpenAI:</p>
     <ul>
       <li>Account names, types, and balances</li>
-      <li>Transaction history (last 60 days): merchant names, amounts, dates, and categories</li>
+      <li>Transaction history (last 60 days): merchant or description names, amounts, dates, and categories</li>
       <li>Spending summaries and top merchants</li>
-      <li>Your chat messages in the current session</li>
+      <li>Your recent chat messages in the current conversation</li>
       <li>Photos you choose to share (for the visual affordability check)</li>
     </ul>
 
@@ -202,6 +209,9 @@
     <ul>
       <li><strong>Supabase</strong> — database hosting and authentication (servers located in the United States)</li>
       <li><strong>OpenAI, L.L.C.</strong> — AI language and vision processing</li>
+      <li><strong>RevenueCat, Inc.</strong> — subscription management and purchase validation</li>
+      <li><strong>Apple App Store / Google Play</strong> — subscription billing and payment processing (we never receive your full payment card details)</li>
+      <li><strong>Apple (Sign in with Apple) &amp; Google (Google Sign-In)</strong> — optional account authentication</li>
       <li><strong>Expo / EAS</strong> — app build infrastructure and push notification delivery</li>
     </ul>
 
@@ -270,7 +280,7 @@
     <p>We collect only the information necessary for the purposes identified in this policy. We do not use your information for purposes other than those for which it was collected, except with your consent or as required by law.</p>
 
     <h3>9.3 Cross-Border Transfers</h3>
-    <p>Your information is processed and stored on servers located in the United States (Supabase, OpenAI). By using Duori, you acknowledge that your data will be transferred to and processed in the United States, which may have different privacy laws than your province or territory. We ensure such transfers are protected by appropriate contractual safeguards.</p>
+    <p>Your information is processed and stored on servers located in the United States (Supabase, OpenAI, RevenueCat) and may be processed by the app store (Apple or Google) that handles your subscription. By using Duori, you acknowledge that your data will be transferred to and processed in the United States, which may have different privacy laws than your province or territory. We ensure such transfers are protected by appropriate contractual safeguards.</p>
 
     <h3>9.4 Quebec-Specific Rights (Law 25)</h3>
     <p>If you are a resident of Quebec, you have the following additional rights:</p>
